@@ -1,0 +1,34 @@
+.articulo{
+    display: flex;
+    grid-area: articulo;
+    height: 24rem;
+    width: 32rem;
+    align-items: center;
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1.56rem;
+        font-size: 1.50rem;
+        color: white;
+        height: 24rem;
+        width: 32rem;
+        border-radius: .625rem .625rem 8rem .625rem;
+        li{
+            margin-left: 1.625rem;
+        }
+    }
+}
+
+.listaElec{
+    background-image: url(../assets/IMG/Electricidad.jpeg);
+}
+.listaPlomero{
+    background-image: url(../assets/IMG/plomero.png);
+}
+.listaPintor{
+    background-image: url(../assets/IMG/pintordg.png);
+}
+.listaConst{
+    background-image: url(../assets/IMG/constructor.png);
+}

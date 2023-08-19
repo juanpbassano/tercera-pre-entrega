@@ -1,0 +1,142 @@
+main {
+    grid-area: main; /*ASIGNADO AL GRID DEL BODY*/
+    div {
+        display: grid;
+        grid-template: 7rem 27.25rem / 40% 60%;
+        grid-template-areas:
+            "antetitulo antetitulo"
+            "menuPrincipal articulo";
+        section {
+            grid-area: menuPrincipal;
+            width: 24.375rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-left: .625rem;
+                padding: 1rem;
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: white;
+                    letter-spacing: -0.01rem;
+                }
+                ol{
+                    li{
+                        &:nth-child(1){
+                            background-color: $color-background-elec;
+                        }
+                        &:nth-child(2){
+                            background-color: $color-background-plom;
+                        }
+                        &:nth-child(3){
+                            background-image: url(../../assets/IMG/BOTONLollipop-Rainbox-Swirl.jpg);
+                        }
+                        &:nth-child(4){
+                            background-color: $color-background-const;
+                        }
+                        width: 9.375rem;
+                        height: 2.1875rem;
+                        border-radius: .625rem;
+                        box-shadow: .3125rem .3125rem .3125rem gray;
+                        list-style: none;                        
+                        margin: 1.25rem 1.25rem 1.25rem 3rem;
+                        display: flex;
+                        flex-direction: column;
+                        }
+                        a{
+                            text-decoration: none;
+                            text-align: center;
+                            color: black;
+                            font-weight: 500;
+                            padding: .3125rem;
+                        }
+                    }
+                }
+            }
+        }
+        div{
+            grid-area: articulo;   
+            }
+        }
+
+.menuArticulo{
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.575);
+        height: 25rem;
+        display: flex;
+        margin-right: 6.25rem;
+        margin-bottom: 3.125rem;
+        p{
+            padding: 8rem;
+            color: rgb(0, 0, 0);
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            img{
+                margin-right: 5rem;
+                width: 18.75rem;
+                height: 18.75rem;
+                border-radius: 50%;
+            }
+        }
+}
+
+.gridFormulario{
+    padding: .625rem;
+    background-color: #4CAF50;
+    border: solid rgba(0, 0, 0, 0.61) .0300rem;
+    border-radius: .313rem;
+    display:grid;
+    grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
+    grid-template-areas: 
+    "t1 t1"
+    "datos consul"
+    "selec selec"
+    ". enviar";
+    .t1{
+        grid-area: t1;
+        font-size: 1rem;
+        font-weight: 800;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+    }
+    .datos{
+        grid-area: datos;
+        display: flex;
+        flex-direction: column;
+    }
+    .selec{
+        grid-area: selec;
+        display: block;
+        font-size: 0.8rem;
+        text-align: center;
+        input{
+            width: auto;
+            margin: .625rem;
+        }
+    }
+    .consul{
+        grid-area:consul;
+        display: block;
+    }
+    .enviar{
+        grid-area: enviar;
+        display: flex;
+        flex-direction: row ;
+        justify-content:right;
+        align-items: center;
+        padding:0 1.25rem .625rem 0;
+        input{
+            width: 3.125rem;
+            height: 1.5625rem;
+            border-radius: .125rem;
+        }
+    }
+}
+

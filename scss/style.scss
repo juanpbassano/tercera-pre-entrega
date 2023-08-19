@@ -1,0 +1,19 @@
+/*variables mixins y funciones*/
+@import "./Base/typos";
+@import "./utilities/variables";
+/*todo lo correspondiente al codigo*/
+@import "./Base/reset";
+@import "./layout/body";
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/titulos";
+@import "./components/bootstrap";
+@import "./layout/articulo";
+@import "./layout/footer";
+
+
+
+/*todo lo correspondiente a media queries*/
+@import "./layout/mediaQ/media1024";
+@import "./layout/mediaQ/media768";
+@import "./layout/mediaQ/media320";

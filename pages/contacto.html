@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Contacte a Reparaciones del hogar</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Reparaciones del Hogar</h1>
+            <p>De Gaspar Lavallen</p>
+        </div>
+        <nav class="navBar">
+            <a class="btInd" href="../index.html">Inicio</a>
+            <a class="btCont" href="#">Contactenos</a>
+        </nav>
+    </header>
+    <main>
+        <div class="gridmain">
+            <div class="antetitulo">
+                <h2 class="titCont">Contáctenos</h2>
+            </div>
+            <section class="menuPrincipal">
+                <div>
+                    <h3>Seleccione el tipo de reparacion</h3>
+                    <ol>
+                        <li class="mpElec"><a href="electricidad.html">Electricidad</a></li>
+                        <li class="mpPlom"><a href="plomeria.html">Plomeria</a></li>
+                        <li class="mpPint"><a href="pintura.html">Pintura</a></li>
+                        <li class="mpCons"><a href="construccion.html">Construccion</a></li>
+                    </ol>
+                </div>
+            </section>
+            <div class="articulo">
+                <form action="">
+                    <div class="gridFormulario">
+                        <span class="t1">Ingresar datos personales</span>
+                        <div class="datos">
+                            <label for="Nombre:">
+                                <span>Nombre</span>
+                                <input type="text" name="Nombre" id="Nombre:" required>
+                            </label>
+                            <label for="apellido">
+                                <span>Apellido</span>
+                                <input type="text" name="apellido" id="apellido" required>
+                            </label>
+                            <label for="numero de telefono">
+                                <span>Numero de Cel.</span>
+                                <input type="number" id="numero de telefono" required>
+                            </label>
+                            <label for="Email">
+                                <span>Email</span>
+                                <input type="email" id="Email" required>
+                            </label>
+                        </div>
+                        <div class="selec">
+                            <p>A continuacion seleccione la URGENCIA del tipo de reparacion </p>
+                            <label for="Urgente">Urgente</label>
+                            <input type="radio" name="urgencia" id="Urgente" value="Urgente">
+                            <label for="No tan urgente">No tan urgente</label>
+                            <input type="radio" name="urgencia" id="no tan urgente" value="no tan urgente">
+                            <label for="">Puedo esperar</label>
+                            <input type="radio" name="urgencia" id="Puedo esperar" value="Puedo esperar">
+                        </div>
+                        <div class="consul">
+                            <legend>Desarrolle su consulta</legend>
+                            <textarea name="textarea" rows="10" cols="32" for="mensaje"
+                                placeholder="Describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+                        </div>
+                        <div class="enviar">
+                            <input class="boton" type="submit" name="enviar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>© Copyright 2023. Todos los Derechos Reservados. <br> Junin - Provincia de Buenos aires, Argentina</p>
+        </div>
+        <div class="siganosFoot">
+            <p>Síganos!</p>
+            <a href="https://www.facebook.com/"><img src="../assets/IMG/fb.png" alt="logo de facebook"></a>
+            <a href="https://www.instagram.com/"><img src="../assets/IMG/ig.png" alt="Logo de instagram"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

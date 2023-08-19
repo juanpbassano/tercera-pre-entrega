@@ -1,0 +1,32 @@
+.antetitulo{
+    grid-area: antetitulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+        h2{
+            padding: .3rem;
+            text-align: center;
+            color: white;
+            width: 12.5rem; 
+            height: 3.125rem;
+            border-radius: .625rem;
+            box-shadow: .3125rem .3125rem .3125rem gray;
+        }
+    }
+
+.titElec{
+    background-color: $color-background-elec;
+}
+.titPlom{
+    background-color: $color-background-plom;
+}
+.titPint{
+    background-color: $color-background-pint;
+}
+.titConst{
+    background-color: $color-background-const;
+}
+.titCont{
+    background-color: blue;
+}

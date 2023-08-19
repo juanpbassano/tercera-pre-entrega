@@ -1,0 +1,269 @@
+/*variables mixins y funciones*/
+@import url("https://fonts.googleapis.com/css2?family=K2D:wght@100;200;400;500;600;800&display=swap");
+/*todo lo correspondiente al codigo*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url(../assets/IMG/fondo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'K2D', sans-serif;
+  display: grid;
+  width: auto;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header"
+ "main"
+ "footer"; }
+
+header {
+  grid-area: header;
+  background: linear-gradient(#0a5312, rgba(6, 95, 25, 0.24));
+  width: 100%;
+  height: 4rem;
+  font-family: 'K2D', sans-serif;
+  text-indent: 0.625rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999; }
+  header div h1 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: -0.1rem; }
+  header div p {
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: end; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-right: 1.5rem; }
+    header nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.25rem;
+      font-weight: 400;
+      width: 9.375rem;
+      height: 1.875rem;
+      background-color: white;
+      border-radius: .625rem;
+      box-shadow: .3125rem .3125rem .3125rem gray; }
+
+main {
+  grid-area: main;
+  /*ASIGNADO AL GRID DEL BODY*/ }
+  main div {
+    display: grid;
+    grid-template: 7rem 27.25rem / 40% 60%;
+    grid-template-areas: "antetitulo antetitulo"
+ "menuPrincipal articulo"; }
+    main div section {
+      grid-area: menuPrincipal;
+      width: 24.375rem; }
+      main div section div {
+        display: flex;
+        flex-direction: column;
+        margin-left: .625rem;
+        padding: 1rem; }
+        main div section div h3 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: white;
+          letter-spacing: -0.01rem; }
+        main div section div ol li {
+          width: 9.375rem;
+          height: 2.1875rem;
+          border-radius: .625rem;
+          box-shadow: .3125rem .3125rem .3125rem gray;
+          list-style: none;
+          margin: 1.25rem 1.25rem 1.25rem 3rem;
+          display: flex;
+          flex-direction: column; }
+          main div section div ol li:nth-child(1) {
+            background-color: rgba(0, 0, 255, 0.6); }
+          main div section div ol li:nth-child(2) {
+            background-color: #d93f05; }
+          main div section div ol li:nth-child(3) {
+            background-image: url(../../assets/IMG/BOTONLollipop-Rainbox-Swirl.jpg); }
+          main div section div ol li:nth-child(4) {
+            background-color: #bdff00; }
+        main div section div ol a {
+          text-decoration: none;
+          text-align: center;
+          color: black;
+          font-weight: 500;
+          padding: .3125rem; }
+  main div {
+    grid-area: articulo; }
+
+.menuArticulo {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.575);
+  height: 25rem;
+  display: flex;
+  margin-right: 6.25rem;
+  margin-bottom: 3.125rem; }
+  .menuArticulo p {
+    padding: 8rem;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 400; }
+  .menuArticulo div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center; }
+    .menuArticulo div img {
+      margin-right: 5rem;
+      width: 18.75rem;
+      height: 18.75rem;
+      border-radius: 50%; }
+
+.gridFormulario {
+  padding: .625rem;
+  background-color: #4CAF50;
+  border: solid rgba(0, 0, 0, 0.61) 0.03rem;
+  border-radius: .313rem;
+  display: grid;
+  grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
+  grid-template-areas: "t1 t1"
+ "datos consul"
+ "selec selec"
+ ". enviar"; }
+  .gridFormulario .t1 {
+    grid-area: t1;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .gridFormulario .datos {
+    grid-area: datos;
+    display: flex;
+    flex-direction: column; }
+  .gridFormulario .selec {
+    grid-area: selec;
+    display: block;
+    font-size: 0.8rem;
+    text-align: center; }
+    .gridFormulario .selec input {
+      width: auto;
+      margin: .625rem; }
+  .gridFormulario .consul {
+    grid-area: consul;
+    display: block; }
+  .gridFormulario .enviar {
+    grid-area: enviar;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding: 0 1.25rem .625rem 0; }
+    .gridFormulario .enviar input {
+      width: 3.125rem;
+      height: 1.5625rem;
+      border-radius: .125rem; }
+
+.antetitulo {
+  grid-area: antetitulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600; }
+  .antetitulo h2 {
+    padding: .3rem;
+    text-align: center;
+    color: white;
+    width: 12.5rem;
+    height: 3.125rem;
+    border-radius: .625rem;
+    box-shadow: .3125rem .3125rem .3125rem gray; }
+
+.titElec {
+  background-color: rgba(0, 0, 255, 0.6); }
+
+.titPlom {
+  background-color: #d93f05; }
+
+.titPint {
+  background-color: black; }
+
+.titConst {
+  background-color: #bdff00; }
+
+.titCont {
+  background-color: blue; }
+
+#carouselExampleAutoplaying div {
+  height: 24rem;
+  width: 32rem; }
+
+.articulo {
+  display: flex;
+  grid-area: articulo;
+  height: 24rem;
+  width: 32rem;
+  align-items: center; }
+  .articulo ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.56rem;
+    font-size: 1.50rem;
+    color: white;
+    height: 24rem;
+    width: 32rem;
+    border-radius: .625rem .625rem 8rem .625rem; }
+    .articulo ul li {
+      margin-left: 1.625rem; }
+
+.listaElec {
+  background-image: url(../assets/IMG/Electricidad.jpeg); }
+
+.listaPlomero {
+  background-image: url(../assets/IMG/plomero.png); }
+
+.listaPintor {
+  background-image: url(../assets/IMG/pintordg.png); }
+
+.listaConst {
+  background-image: url(../assets/IMG/constructor.png); }
+
+footer {
+  grid-area: footer;
+  background: linear-gradient(rgba(182, 218, 173, 0.473), #0a5312);
+  color: white;
+  height: 6.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: .625rem; }
+  footer div p {
+    margin: 3rem 1rem 0.25rem 1rem;
+    font-weight: 200;
+    font-size: 1rem;
+    color: white;
+    text-align: center; }
+
+.siganosFoot {
+  margin-right: 3.125rem; }
+  .siganosFoot p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 1.5rem; }
+
+/*todo lo correspondiente a media queries*/
