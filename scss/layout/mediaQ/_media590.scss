@@ -1,0 +1,58 @@
+@media screen and (max-width:590px){
+    header{
+        div{
+            margin:.125rem;
+            font-size: 0.75rem;
+        }
+        nav{
+            gap: .3rem;
+            margin-right: .3rem;
+            a{
+                font-size: 0.8rem;
+                width: fit-content;
+                padding: .125rem .625rem .125rem .125rem;
+                height: 1.4rem;
+                border-radius: .3rem;
+                box-shadow: .3125rem .3125rem .3125rem gray;
+                }
+            }
+        }
+    .gridmain{
+        .menuPrincipal{
+            div{
+                margin-left: .625rem;
+                ol{
+                    li{
+                    margin-left: 0;
+                    }
+                }
+            }
+        }
+        .articulo{
+            width: 58vw;
+            ul{    
+                li{
+                font-size: 1.1rem;
+                letter-spacing: -0.01rem;
+            }
+        }
+    }
+    .selec{
+        input{
+            margin: .3125rem;
+        }
+    }
+    }
+    .menuArticulo{
+        p{
+            font-size: 1.1rem;
+        }
+    }
+    footer{
+        div{
+            p{
+                font-size: .7rem;
+            }
+        }
+    }
+}

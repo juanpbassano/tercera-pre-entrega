@@ -1,0 +1,58 @@
+@media screen and (max-width:768px) {
+    header{
+        div{
+            font-size: 0.9rem;
+        }
+        nav{
+            gap: .5rem;
+            margin-right: .5rem;
+            a{
+                margin:0;
+                font-size: 1rem;
+                width: 7rem;
+                height: 1.4rem;
+                border-radius: .3rem;
+                box-shadow: .3125rem .3125rem .3125rem gray;
+                }
+            }
+        }
+    
+    .gridmain{
+        .menuPrincipal{
+            margin-left: .3125rem;
+            div{
+                padding: .3125rem 0 0 .3125rem;
+                h3{
+                    font-size: 1.2rem ;
+                    letter-spacing: -0.05rem ;
+                }
+                ol{
+                    li{
+                        width: 6.6rem;
+                        height: 1.875rem;
+                        border-radius: .625rem;
+                    }
+                }
+            }
+        }
+        .articulo{
+            margin: 2rem 0.3rem 0 0;
+            height: fit-content;
+            ul{    
+                li{
+                    margin-left: .3125rem;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .menuArticulo{
+        .imgArticulo{
+            img{
+                width: 12rem ;
+                height: 12rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+}

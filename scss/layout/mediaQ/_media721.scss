@@ -1,0 +1,21 @@
+@media screen and (max-width:721px){
+        .gridmain{
+                .articulo{
+            width: 55vw;
+            ul{    
+                li{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .selec{
+            text-align: center;
+            input{
+                margin: .3125rem;
+            }
+        }
+    }
+    .siganosFoot{
+        margin-right: .625rem;
+    }
+}

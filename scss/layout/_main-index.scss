@@ -1,6 +1,7 @@
 main {
     grid-area: main; /*ASIGNADO AL GRID DEL BODY*/
-    div {
+    .gridmain{
+        width: 100vw;
         display: grid;
         grid-template: 7rem 27.25rem / 40% 60%;
         grid-template-areas:
@@ -67,7 +68,7 @@ main {
         margin-right: 6.25rem;
         margin-bottom: 3.125rem;
         p{
-            padding: 8rem;
+            margin: auto auto auto .3125rem;
             color: rgb(0, 0, 0);
             font-size: 1.25rem;
             font-weight: 400;
@@ -110,6 +111,9 @@ main {
         grid-area: datos;
         display: flex;
         flex-direction: column;
+        input{
+            width: 95%;
+        }
     }
     .selec{
         grid-area: selec;
@@ -135,7 +139,9 @@ main {
         input{
             width: 3.125rem;
             height: 1.5625rem;
-            border-radius: .125rem;
+            border-radius: .3125rem;
+            font-size: 0.9rem;
+            padding: .125rem .1875rem .3125rem .1875rem;
         }
     }
 }

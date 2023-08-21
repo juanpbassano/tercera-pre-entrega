@@ -1,0 +1,29 @@
+@media screen and (max-width:960px) {
+    .menuPrincipal{
+        div{
+        margin-left: 0;
+        width: fit-content;
+        }
+    }
+    .articulo{
+        margin-left: .625rem;
+        width: 32rem;
+    }
+    .menuArticulo{
+        .imgArticulo{
+            img{
+                margin-right: 1.25rem;
+            }
+        }
+    }
+    .gridFormulario{
+        padding: .625rem;
+        display:grid;
+        grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 12.5rem 16rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+    }
+}

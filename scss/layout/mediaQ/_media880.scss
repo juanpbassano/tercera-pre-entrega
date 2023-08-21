@@ -1,0 +1,64 @@
+@media screen and (max-width:880px) {
+    .gridmain{
+        .menuPrincipal{
+            width: 20rem;
+            div{
+                h3{
+                    font-size: 1.3rem ;
+                    letter-spacing: -0.05rem ;
+                }
+                ol{
+                    li{
+                        margin: 1.25rem 1.25rem 1.25rem 0rem;
+                    }
+                }
+            }
+        }
+        .articulo{
+            width: auto;
+            margin-right: .3125rem;
+            ul{
+                li{
+                    margin-left: .3125rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .gridFormulario{
+        font-size: 0.9rem;
+        width: auto;
+        padding: .625rem;
+        display:grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows:  1.875rem 12.5rem 4.375rem 3.125rem;
+        grid-template-areas: 
+        "t1 t1"
+        "datos consul"
+        "selec selec"
+        ". enviar";
+        .datos{
+            display: block;
+            label{
+                input{
+                    width: 95%;
+                }
+            }
+        .selec{
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        }
+        .consul{
+            textarea{
+                width: 100%;
+            }
+        }
+    }
+    #carouselExampleAutoplaying{
+        div{
+            width: 32rem;
+        }
+    }
+}

@@ -16,9 +16,7 @@ body {
   width: auto;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header"
- "main"
- "footer"; }
+  grid-template-areas: "header" "main" "footer"; }
 
 header {
   grid-area: header;
@@ -65,25 +63,25 @@ header {
 main {
   grid-area: main;
   /*ASIGNADO AL GRID DEL BODY*/ }
-  main div {
+  main .gridmain {
+    width: 100vw;
     display: grid;
     grid-template: 7rem 27.25rem / 40% 60%;
-    grid-template-areas: "antetitulo antetitulo"
- "menuPrincipal articulo"; }
-    main div section {
+    grid-template-areas: "antetitulo antetitulo" "menuPrincipal articulo"; }
+    main .gridmain section {
       grid-area: menuPrincipal;
       width: 24.375rem; }
-      main div section div {
+      main .gridmain section div {
         display: flex;
         flex-direction: column;
         margin-left: .625rem;
         padding: 1rem; }
-        main div section div h3 {
+        main .gridmain section div h3 {
           font-size: 1.5rem;
           font-weight: 400;
           color: white;
           letter-spacing: -0.01rem; }
-        main div section div ol li {
+        main .gridmain section div ol li {
           width: 9.375rem;
           height: 2.1875rem;
           border-radius: .625rem;
@@ -92,15 +90,15 @@ main {
           margin: 1.25rem 1.25rem 1.25rem 3rem;
           display: flex;
           flex-direction: column; }
-          main div section div ol li:nth-child(1) {
+          main .gridmain section div ol li:nth-child(1) {
             background-color: rgba(0, 0, 255, 0.6); }
-          main div section div ol li:nth-child(2) {
+          main .gridmain section div ol li:nth-child(2) {
             background-color: #d93f05; }
-          main div section div ol li:nth-child(3) {
+          main .gridmain section div ol li:nth-child(3) {
             background-image: url(../assets/IMG/BOTONLollipop-Rainbox-Swirl.jpg); }
-          main div section div ol li:nth-child(4) {
+          main .gridmain section div ol li:nth-child(4) {
             background-color: #bdff00; }
-        main div section div ol a {
+        main .gridmain section div ol a {
           text-decoration: none;
           text-align: center;
           color: black;
@@ -117,7 +115,7 @@ main {
   margin-right: 6.25rem;
   margin-bottom: 3.125rem; }
   .menuArticulo p {
-    padding: 8rem;
+    margin: auto auto auto .3125rem;
     color: black;
     font-size: 1.25rem;
     font-weight: 400; }
@@ -139,10 +137,7 @@ main {
   border-radius: .313rem;
   display: grid;
   grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
-  grid-template-areas: "t1 t1"
- "datos consul"
- "selec selec"
- ". enviar"; }
+  grid-template-areas: "t1 t1" "datos consul" "selec selec" ". enviar"; }
   .gridFormulario .t1 {
     grid-area: t1;
     font-size: 1rem;
@@ -154,6 +149,8 @@ main {
     grid-area: datos;
     display: flex;
     flex-direction: column; }
+    .gridFormulario .datos input {
+      width: 95%; }
   .gridFormulario .selec {
     grid-area: selec;
     display: block;
@@ -175,7 +172,9 @@ main {
     .gridFormulario .enviar input {
       width: 3.125rem;
       height: 1.5625rem;
-      border-radius: .125rem; }
+      border-radius: .3125rem;
+      font-size: 0.9rem;
+      padding: .125rem .1875rem .3125rem .1875rem; }
 
 .antetitulo {
   grid-area: antetitulo;
@@ -208,8 +207,8 @@ main {
   background-color: blue; }
 
 #carouselExampleAutoplaying div {
-  height: auto;
-  width: 32rem; }
+  max-width: 100%;
+  height: auto; }
 
 .articulo {
   display: flex;
@@ -267,3 +266,161 @@ footer {
     font-size: 1.5rem; }
 
 /*todo lo correspondiente a media queries*/
+@media screen and (max-width: 960px) {
+  .menuPrincipal div {
+    margin-left: 0;
+    width: fit-content; }
+  .articulo {
+    margin-left: .625rem;
+    width: 32rem; }
+  .menuArticulo .imgArticulo img {
+    margin-right: 1.25rem; }
+  .gridFormulario {
+    padding: .625rem;
+    display: grid;
+    grid-template: 1.875rem 12.5rem 4.375rem 3.125rem / 12.5rem 16rem;
+    grid-template-areas: "t1 t1" "datos consul" "selec selec" ". enviar"; } }
+
+@media screen and (max-width: 880px) {
+  .gridmain .menuPrincipal {
+    width: 20rem; }
+    .gridmain .menuPrincipal div h3 {
+      font-size: 1.3rem;
+      letter-spacing: -0.05rem; }
+    .gridmain .menuPrincipal div ol li {
+      margin: 1.25rem 1.25rem 1.25rem 0rem; }
+  .gridmain .articulo {
+    width: auto;
+    margin-right: .3125rem; }
+    .gridmain .articulo ul li {
+      margin-left: .3125rem;
+      font-size: 1.4rem; }
+  .gridFormulario {
+    font-size: 0.9rem;
+    width: auto;
+    padding: .625rem;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1.875rem 12.5rem 4.375rem 3.125rem;
+    grid-template-areas: "t1 t1" "datos consul" "selec selec" ". enviar"; }
+    .gridFormulario .datos {
+      display: block; }
+      .gridFormulario .datos label input {
+        width: 95%; }
+      .gridFormulario .datos .selec p {
+        font-size: 0.8rem; }
+    .gridFormulario .consul textarea {
+      width: 100%; }
+  #carouselExampleAutoplaying div {
+    width: 32rem; } }
+
+@media screen and (max-width: 768px) {
+  header div {
+    font-size: 0.9rem; }
+  header nav {
+    gap: .5rem;
+    margin-right: .5rem; }
+    header nav a {
+      margin: 0;
+      font-size: 1rem;
+      width: 7rem;
+      height: 1.4rem;
+      border-radius: .3rem;
+      box-shadow: .3125rem .3125rem .3125rem gray; }
+  .gridmain .menuPrincipal {
+    margin-left: .3125rem; }
+    .gridmain .menuPrincipal div {
+      padding: .3125rem 0 0 .3125rem; }
+      .gridmain .menuPrincipal div h3 {
+        font-size: 1.2rem;
+        letter-spacing: -0.05rem; }
+      .gridmain .menuPrincipal div ol li {
+        width: 6.6rem;
+        height: 1.875rem;
+        border-radius: .625rem; }
+  .gridmain .articulo {
+    margin: 2rem 0.3rem 0 0;
+    height: fit-content; }
+    .gridmain .articulo ul li {
+      margin-left: .3125rem;
+      font-size: 1.3rem; }
+  .menuArticulo .imgArticulo img {
+    width: 12rem;
+    height: 12rem;
+    margin-right: 2rem; } }
+
+@media screen and (max-width: 721px) {
+  .gridmain .articulo {
+    width: 55vw; }
+    .gridmain .articulo ul li {
+      font-size: 1.2rem; }
+  .gridmain .selec {
+    text-align: center; }
+    .gridmain .selec input {
+      margin: .3125rem; }
+  .siganosFoot {
+    margin-right: .625rem; } }
+
+@media screen and (max-width: 590px) {
+  header div {
+    margin: .125rem;
+    font-size: 0.75rem; }
+  header nav {
+    gap: .3rem;
+    margin-right: .3rem; }
+    header nav a {
+      font-size: 0.8rem;
+      width: fit-content;
+      padding: .125rem .625rem .125rem .125rem;
+      height: 1.4rem;
+      border-radius: .3rem;
+      box-shadow: .3125rem .3125rem .3125rem gray; }
+  .gridmain .menuPrincipal div {
+    margin-left: .625rem; }
+    .gridmain .menuPrincipal div ol li {
+      margin-left: 0; }
+  .gridmain .articulo {
+    width: 58vw; }
+    .gridmain .articulo ul li {
+      font-size: 1.1rem;
+      letter-spacing: -0.01rem; }
+  .gridmain .selec input {
+    margin: .3125rem; }
+  .menuArticulo p {
+    font-size: 1.1rem; }
+  footer div p {
+    font-size: .7rem; } }
+
+@media screen and (max-width: 425px) {
+  header div h1 {
+    font-size: 1.133rem; }
+  header .navBar a {
+    font-weight: 400; }
+  /* main mobiles */
+  main .gridmain {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 14.25rem 11.5rem;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "menuPrincipal antetitulo" "articulo articulo"; }
+    main .gridmain .menuPrincipal div {
+      margin-left: .625rem 0 0 .3125rem;
+      padding: .3125rem; }
+      main .gridmain .menuPrincipal div ol li {
+        margin: 10px 10px 10px 20px;
+        width: 6.4375rem;
+        height: 2rem; }
+    main .gridmain .articulo {
+      width: 95vw;
+      margin: .625rem 0 .3125rem .625rem; }
+      main .gridmain .articulo ul li {
+        font-size: 1.3rem; }
+    main .gridmain #carouselExampleAutoplaying {
+      width: 95vw;
+      margin: .625rem 0 .3125rem .625rem; }
+  main .menuArticulo p {
+    font-size: 0.9rem; }
+  main .menuArticulo .imgArticulo img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%; } }
