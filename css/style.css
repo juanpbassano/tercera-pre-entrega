@@ -7,7 +7,7 @@
   box-sizing: border-box; }
 
 body {
-  background-image: url(../../assets/IMG/fondo.png);
+  background-image: url(../assets/IMG/fondo.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -115,7 +115,7 @@ main {
   margin-right: 6.25rem;
   margin-bottom: 3.125rem; }
   .menuArticulo p {
-    margin: auto auto auto .3125rem;
+    margin: auto auto auto .625rem;
     color: black;
     font-size: 1.25rem;
     font-weight: 400; }
@@ -400,9 +400,13 @@ footer {
   main .gridmain {
     align-items: center;
     display: grid;
-    grid-template-columns: 14.25rem 11.5rem;
+    grid-template-columns: 14.25rem auto;
     grid-template-rows: 1fr 2fr;
     grid-template-areas: "menuPrincipal antetitulo" "articulo articulo"; }
+    main .gridmain .antetitulo h2 {
+      width: 7.5rem;
+      height: 2rem;
+      font-size: 1.2rem; }
     main .gridmain .menuPrincipal div {
       margin-left: .625rem 0 0 .3125rem;
       padding: .3125rem; }
@@ -411,7 +415,7 @@ footer {
         width: 6.4375rem;
         height: 2rem; }
     main .gridmain .articulo {
-      width: 95vw;
+      width: 94vw;
       margin: .625rem 0 .3125rem .625rem; }
       main .gridmain .articulo ul li {
         font-size: 1.3rem; }
@@ -424,3 +428,43 @@ footer {
     width: 8rem;
     height: 8rem;
     border-radius: 50%; } }
+
+@media screen and (max-width: 375px) {
+  header div {
+    margin: .0625rem 0 0 0; }
+    header div h1 {
+      font-size: 0.9rem;
+      margin: 0; }
+  header .navBar a {
+    padding: .1rem .3rem .1rem .1rem; }
+  main .gridmain {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 10rem auto;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "menuPrincipal antetitulo" "articulo articulo"; }
+    main .gridmain .antetitulo h2 {
+      width: 7rem;
+      height: 2rem;
+      font-size: 1.1rem; }
+  footer div p {
+    margin: 3rem 0rem 0.25rem 0.1rem; }
+  footer .siganosFoot {
+    margin: 1rem 0.2rem auto 0; }
+    footer .siganosFoot p {
+      font-size: 1.2rem; }
+    footer .siganosFoot a img {
+      max-width: 1.875rem; } }
+
+@media screen and (max-width: 326px) {
+  main .gridmain .menuPrincipal {
+    width: 18rem; }
+  main .gridmain .articulo ul li {
+    margin: 0;
+    font-size: 19.2px; }
+  main .gridmain .gridFormulario .selec input {
+    margin: .0625rem; }
+  main .menuArticulo p {
+    font-size: 0.8rem; }
+  main .menuArticulo .imgArticulo img {
+    margin-right: 0; } }

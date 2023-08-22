@@ -1,0 +1,53 @@
+@media screen and (max-width:375px) {
+        header {
+            div {
+                margin: .0625rem 0 0 0;
+                h1 {
+                    font-size: 0.9rem;
+                    margin: 0;
+                }
+            }
+            .navBar{
+                a{
+                    padding: .1rem .3rem .1rem .1rem;
+                }
+            }
+        }
+        main{
+            .gridmain {
+                align-items: center;
+                display: grid;
+                grid-template-columns: 10rem auto;
+                grid-template-rows: 1fr 2fr;
+                grid-template-areas:
+                    "menuPrincipal antetitulo"
+                    "articulo articulo";
+                .antetitulo {
+                    h2 {
+                        width: 7rem;
+                        height: 2rem;
+                        font-size: 1.1rem
+                    }
+                }
+            }
+        }
+            footer {
+                div {
+                    p {
+                        margin: 3rem 0rem 0.25rem 0.1rem;
+                    }
+                }
+                .siganosFoot {
+                    margin: 1rem 0.2rem auto 0;
+                    p {
+                        font-size: 1.2rem;
+                    }
+                    a {
+                        img {
+                            max-width: 1.875rem;
+                        }
+                    }
+                }
+            }
+        }
+

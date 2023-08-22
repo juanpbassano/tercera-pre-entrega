@@ -16,11 +16,18 @@
         .gridmain{
             align-items: center;
             display: grid;
-            grid-template-columns: 14.25rem 11.5rem;
+            grid-template-columns: 14.25rem auto;
             grid-template-rows:  1fr 2fr;
             grid-template-areas: 
             "menuPrincipal antetitulo"
             "articulo articulo";
+            .antetitulo{
+                h2{
+                width:  7.5rem;
+                height: 2rem;
+                font-size: 1.2rem
+                }
+            }
             .menuPrincipal{
                 div {
                     margin-left:.625rem 0 0 .3125rem;
@@ -35,7 +42,7 @@
                 }
             }
             .articulo{
-                width: 95vw;
+                width: 94vw;
                 margin:.625rem 0 .3125rem .625rem;
                 ul{
                     li{

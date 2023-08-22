@@ -1,0 +1,34 @@
+@media screen and (max-width:326px){
+    main{
+        .gridmain{
+            .menuPrincipal{
+                width: 18rem;
+            }
+            .articulo{
+                ul{
+                    li{
+                        margin:0;
+                        font-size: 19.2px;
+                    }
+                }
+            }
+            .gridFormulario{
+                .selec{
+                    input{
+                        margin:.0625rem;
+                    }
+                }
+            }
+        }
+        .menuArticulo{
+            p{
+                font-size: 0.8rem;
+            }
+            .imgArticulo{
+                img{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
