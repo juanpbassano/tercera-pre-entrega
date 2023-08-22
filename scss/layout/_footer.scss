@@ -1,7 +1,6 @@
 footer{
     grid-area: footer;
     background: linear-gradient(rgba(182, 218, 173, 0.473), rgba(10, 83, 18, 1));
-    color: rgb(255, 255, 255);
     height: 6.25rem;
     display: flex;
     flex-direction: row;
@@ -12,7 +11,7 @@ footer{
             margin: 3rem 1rem 0.25rem 1rem;
             font-weight: 200;
             font-size: 1rem;
-            color:white;
+            color:$color-fuentes1;
             text-align: center;
         }
     }
@@ -22,7 +21,7 @@ footer{
     p{
         margin: 0;
         padding: 0;
-        color: black;
+        color: $color-fuentes2;
         font-size: 1.5rem;
     }
 }

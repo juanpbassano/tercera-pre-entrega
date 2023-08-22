@@ -4,12 +4,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'K2D', sans-serif;
-    display: grid;
     width: auto;
     min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+    @include grid(none, auto 1fr auto, "header""main""footer");
 }

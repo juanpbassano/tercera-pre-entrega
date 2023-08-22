@@ -1,24 +1,18 @@
 main {
     grid-area: main; /*ASIGNADO AL GRID DEL BODY*/
     .gridmain{
-        width: 100vw;
-        display: grid;
-        grid-template: 7rem 27.25rem / 40% 60%;
-        grid-template-areas:
-            "antetitulo antetitulo"
-            "menuPrincipal articulo";
+        @include grid(40% 60%, 7rem 27.25rem,"antetitulo antetitulo""menuPrincipal articulo");
         section {
             grid-area: menuPrincipal;
             width: 24.375rem;
             div {
-                display: flex;
-                flex-direction: column;
+                @include flex(column, none, none, none);
                 margin-left: .625rem;
                 padding: 1rem;
                 h3 {
                     font-size: 1.5rem;
                     font-weight: 400;
-                    color: white;
+                    color: $color-fuentes1; 
                     letter-spacing: -0.01rem;
                 }
                 ol{
@@ -47,7 +41,7 @@ main {
                         a{
                             text-decoration: none;
                             text-align: center;
-                            color: black;
+                            color: $color-fuentes2;
                             font-weight: 500;
                             padding: .3125rem;
                         }
@@ -69,15 +63,12 @@ main {
         margin-bottom: 3.125rem;
         p{
             margin: auto auto auto .625rem;
-            color: rgb(0, 0, 0);
+            color: $color-fuentes2;
             font-size: 1.25rem;
             font-weight: 400;
         }
         div{
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-            align-items: center;
+            @include flex(row, end, center, none);
             img{
                 margin-right: 5rem;
                 width: 18.75rem;
@@ -88,17 +79,11 @@ main {
 }
 
 .gridFormulario{
+    @include grid(12.5rem 18rem, 1.875rem 12.5rem 4.375rem 3.125rem, "t1 t1""datos consul""selec selec"". enviar" );
     padding: .625rem;
     background-color: #4CAF50;
     border: solid rgba(0, 0, 0, 0.61) .0300rem;
     border-radius: .313rem;
-    display:grid;
-    grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
-    grid-template-areas: 
-    "t1 t1"
-    "datos consul"
-    "selec selec"
-    ". enviar";
     .t1{
         grid-area: t1;
         font-size: 1rem;
@@ -109,8 +94,7 @@ main {
     }
     .datos{
         grid-area: datos;
-        display: flex;
-        flex-direction: column;
+        @include flex(column, none, none, none);
         input{
             width: 95%;
         }
@@ -131,10 +115,7 @@ main {
     }
     .enviar{
         grid-area: enviar;
-        display: flex;
-        flex-direction: row ;
-        justify-content:right;
-        align-items: center;
+        @include flex(row, right, center, none);
         padding:0 1.25rem .625rem 0;
         input{
             width: 3.125rem;

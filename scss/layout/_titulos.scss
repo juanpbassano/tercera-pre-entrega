@@ -1,13 +1,11 @@
 .antetitulo{
     grid-area: antetitulo;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(none, center, center, none);
     font-weight: 600;
         h2{
             padding: .3rem;
             text-align: center;
-            color: white;
+            color:$color-fuentes1;
             width: 12.5rem; 
             height: 3.125rem;
             border-radius: .625rem;

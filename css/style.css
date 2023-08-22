@@ -12,11 +12,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'K2D', sans-serif;
-  display: grid;
   width: auto;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: none;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "main" "footer"; }
+  grid-template-areas: "header" "main" "footer"; }
 
 header {
   grid-area: header;
@@ -29,6 +30,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: none;
+  gap: none;
   position: sticky;
   top: 0;
   z-index: 999; }
@@ -44,9 +47,8 @@ header {
   header nav {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     gap: 1.5rem;
     margin-right: 1.5rem; }
     header nav a {
@@ -64,16 +66,19 @@ main {
   grid-area: main;
   /*ASIGNADO AL GRID DEL BODY*/ }
   main .gridmain {
-    width: 100vw;
     display: grid;
-    grid-template: 7rem 27.25rem / 40% 60%;
-    grid-template-areas: "antetitulo antetitulo" "menuPrincipal articulo"; }
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 7rem 27.25rem;
+    grid-template-areas: "antetitulo antetitulo" "menuPrincipal articulo"; }
     main .gridmain section {
       grid-area: menuPrincipal;
       width: 24.375rem; }
       main .gridmain section div {
         display: flex;
         flex-direction: column;
+        justify-content: none;
+        align-items: none;
+        gap: none;
         margin-left: .625rem;
         padding: 1rem; }
         main .gridmain section div h3 {
@@ -123,7 +128,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    align-items: center; }
+    align-items: center;
+    gap: none; }
     .menuArticulo div img {
       margin-right: 5rem;
       width: 18.75rem;
@@ -131,13 +137,14 @@ main {
       border-radius: 50%; }
 
 .gridFormulario {
+  display: grid;
+  grid-template-columns: 12.5rem 18rem;
+  grid-template-rows: 1.875rem 12.5rem 4.375rem 3.125rem;
+  grid-template-areas: "t1 t1" "datos consul" "selec selec" ". enviar";
   padding: .625rem;
   background-color: #4CAF50;
   border: solid rgba(0, 0, 0, 0.61) 0.03rem;
-  border-radius: .313rem;
-  display: grid;
-  grid-template: 1.875rem 12.5rem 4.375rem 3.125rem /12.5rem 18rem;
-  grid-template-areas: "t1 t1" "datos consul" "selec selec" ". enviar"; }
+  border-radius: .313rem; }
   .gridFormulario .t1 {
     grid-area: t1;
     font-size: 1rem;
@@ -148,7 +155,10 @@ main {
   .gridFormulario .datos {
     grid-area: datos;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: none;
+    align-items: none;
+    gap: none; }
     .gridFormulario .datos input {
       width: 95%; }
   .gridFormulario .selec {
@@ -168,6 +178,7 @@ main {
     flex-direction: row;
     justify-content: right;
     align-items: center;
+    gap: none;
     padding: 0 1.25rem .625rem 0; }
     .gridFormulario .enviar input {
       width: 3.125rem;
@@ -179,8 +190,10 @@ main {
 .antetitulo {
   grid-area: antetitulo;
   display: flex;
+  flex-direction: none;
   justify-content: center;
   align-items: center;
+  gap: none;
   font-weight: 600; }
   .antetitulo h2 {
     padding: .3rem;
@@ -220,6 +233,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: none;
+    gap: none;
     padding-left: 1.56rem;
     font-size: 1.50rem;
     color: white;
@@ -244,7 +259,6 @@ main {
 footer {
   grid-area: footer;
   background: linear-gradient(rgba(182, 218, 173, 0.473), #0a5312);
-  color: white;
   height: 6.25rem;
   display: flex;
   flex-direction: row;
@@ -396,7 +410,6 @@ footer {
     font-size: 1.133rem; }
   header .navBar a {
     font-weight: 400; }
-  /* main mobiles */
   main .gridmain {
     align-items: center;
     display: grid;

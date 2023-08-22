@@ -5,10 +5,8 @@ header{
     height: 4rem;
     font-family: 'K2D', sans-serif;
     text-indent: 0.625rem;
-    color: white;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    color: $color-fuentes1;
+    @include flex(row, space-between, none, none);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -26,21 +24,16 @@ header{
         }
     }
     nav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 1.5rem;
+        @include flex(row, center, center, 1.5rem);
         margin-right: 1.5rem;
         a{
             text-decoration: none;
-            color: black;
+            color: $color-fuentes2;
             font-size: 1.25rem;
             font-weight: 400;
             width: 9.375rem;
             height: 1.875rem;
-            background-color: white;
+            background-color: $color-fuentes1;
             border-radius: .625rem;
             box-shadow: .3125rem .3125rem .3125rem gray;
         }
