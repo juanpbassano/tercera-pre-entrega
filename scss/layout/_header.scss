@@ -25,9 +25,9 @@ header{
     }
     nav{
         @include flex(row, center, center, 1.5rem);
-        margin-right: 1.5rem;
-        a{
+        .btInd{
             text-decoration: none;
+            text-align: center;
             color: $color-fuentes2;
             font-size: 1.25rem;
             font-weight: 400;
@@ -36,6 +36,10 @@ header{
             background-color: $color-fuentes1;
             border-radius: .625rem;
             box-shadow: .3125rem .3125rem .3125rem gray;
+        }
+        .btCont{
+            @extend .btInd;
+            margin-right: 1.5rem;
         }
     }
 }

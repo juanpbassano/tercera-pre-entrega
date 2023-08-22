@@ -49,10 +49,10 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    margin-right: 1.5rem; }
-    header nav a {
+    gap: 1.5rem; }
+    header nav .btInd, header nav .btCont {
       text-decoration: none;
+      text-align: center;
       color: black;
       font-size: 1.25rem;
       font-weight: 400;
@@ -61,6 +61,8 @@ header {
       background-color: white;
       border-radius: .625rem;
       box-shadow: .3125rem .3125rem .3125rem gray; }
+    header nav .btCont {
+      margin-right: 1.5rem; }
 
 main {
   grid-area: main;
