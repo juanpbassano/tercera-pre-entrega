@@ -384,7 +384,7 @@ footer {
   header nav {
     gap: .3rem;
     margin-right: .3rem; }
-    header nav a {
+    header nav .btInd, header nav .btCont, header nav .btInd, header nav .btCont {
       font-size: 0.8rem;
       width: fit-content;
       padding: .125rem .625rem .125rem .125rem;
@@ -408,10 +408,12 @@ footer {
     font-size: .7rem; } }
 
 @media screen and (max-width: 425px) {
-  header div h1 {
-    font-size: 1.133rem; }
-  header .navBar a {
-    font-weight: 400; }
+  header div {
+    margin-top: .6rem; }
+    header div h1 {
+      font-size: 1.5em; }
+  header .navBar .btCont {
+    margin-right: 0.3rem; }
   main .gridmain {
     align-items: center;
     display: grid;
@@ -445,13 +447,13 @@ footer {
     border-radius: 50%; } }
 
 @media screen and (max-width: 375px) {
-  header div {
-    margin: .0625rem 0 0 0; }
-    header div h1 {
-      font-size: 0.9rem;
-      margin: 0; }
-  header .navBar a {
-    padding: .1rem .3rem .1rem .1rem; }
+  header div h1 {
+    font-size: 1.55em;
+    margin: 0; }
+  header .navBar {
+    margin-right: 0px; }
+    header .navBar a {
+      padding: .1rem .3rem .1rem .1rem; }
   main .gridmain {
     align-items: center;
     display: grid;
@@ -472,6 +474,9 @@ footer {
       max-width: 1.875rem; } }
 
 @media screen and (max-width: 326px) {
+  header div h1 {
+    font-size: 1.26em;
+    margin: 0; }
   main .gridmain .menuPrincipal {
     width: 18rem; }
   main .gridmain .articulo ul li {

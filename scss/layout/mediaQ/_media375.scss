@@ -1,13 +1,13 @@
 @media screen and (max-width:375px) {
         header {
             div {
-                margin: .0625rem 0 0 0;
                 h1 {
-                    font-size: 0.9rem;
+                    font-size: 1.55em;
                     margin: 0;
                 }
             }
             .navBar{
+                margin-right: 0px;
                 a{
                     padding: .1rem .3rem .1rem .1rem;
                 }
