@@ -1,11 +1,11 @@
 /*variables mixins y funciones*/
 @import url("https://fonts.googleapis.com/css2?family=K2D:wght@100;200;400;500;600;800&display=swap");
-/*todo lo correspondiente al codigo*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/*todo lo correspondiente al codigo*/
 body {
   background-image: url(../assets/IMG/fondo.png);
   background-size: cover;
@@ -69,7 +69,7 @@ main {
   /*ASIGNADO AL GRID DEL BODY*/ }
   main .gridmain {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40vw 60vw;
     grid-template-rows: 7rem 27.25rem;
     grid-template-areas: "antetitulo antetitulo" "menuPrincipal articulo"; }
     main .gridmain section {
@@ -192,7 +192,7 @@ main {
 .antetitulo {
   grid-area: antetitulo;
   display: flex;
-  flex-direction: none;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: none;
@@ -228,8 +228,7 @@ main {
 .articulo {
   display: flex;
   grid-area: articulo;
-  height: 24rem;
-  width: 32rem;
+  margin-top: 3.2rem;
   align-items: center; }
   .articulo ul {
     display: flex;
@@ -284,10 +283,10 @@ footer {
 /*todo lo correspondiente a media queries*/
 @media screen and (max-width: 960px) {
   .menuPrincipal div {
-    margin-left: 0;
-    width: fit-content; }
+    margin-left: 0; }
+    .menuPrincipal div h3 {
+      letter-spacing: -0.05rem; }
   .articulo {
-    margin-left: .625rem;
     width: 32rem; }
   .menuArticulo .imgArticulo img {
     margin-right: 1.25rem; }
@@ -299,14 +298,15 @@ footer {
 
 @media screen and (max-width: 880px) {
   .gridmain .menuPrincipal {
-    width: 20rem; }
+    width: 19rem; }
     .gridmain .menuPrincipal div h3 {
-      font-size: 1.3rem;
+      margin: 0;
+      font-size: 1.26rem;
       letter-spacing: -0.05rem; }
     .gridmain .menuPrincipal div ol li {
-      margin: 1.25rem 1.25rem 1.25rem 0rem; }
+      margin: 1.25rem 1.25rem 1.25rem 1.25rem; }
   .gridmain .articulo {
-    width: auto;
+    width: 28rem;
     margin-right: .3125rem; }
     .gridmain .articulo ul li {
       margin-left: .3125rem;
@@ -348,7 +348,7 @@ footer {
     .gridmain .menuPrincipal div {
       padding: .3125rem 0 0 .3125rem; }
       .gridmain .menuPrincipal div h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         letter-spacing: -0.05rem; }
       .gridmain .menuPrincipal div ol li {
         width: 6.6rem;
@@ -356,7 +356,8 @@ footer {
         border-radius: .625rem; }
   .gridmain .articulo {
     margin: 2rem 0.3rem 0 0;
-    height: fit-content; }
+    height: fit-content;
+    width: 27rem; }
     .gridmain .articulo ul li {
       margin-left: .3125rem;
       font-size: 1.3rem; }
@@ -366,6 +367,9 @@ footer {
     margin-right: 2rem; } }
 
 @media screen and (max-width: 721px) {
+  body header .navBar a {
+    margin: 0;
+    width: 8rem; }
   .gridmain .articulo {
     width: 55vw; }
     .gridmain .articulo ul li {
@@ -378,113 +382,120 @@ footer {
     margin-right: .625rem; } }
 
 @media screen and (max-width: 590px) {
-  header div {
-    margin: .125rem;
-    font-size: 0.75rem; }
-  header nav {
+  body header div h1 {
+    font-size: 1.79em; }
+  body header .navBar {
     gap: .3rem;
     margin-right: .3rem; }
-    header nav .btInd, header nav .btCont, header nav .btInd, header nav .btCont {
+    body header .navBar a {
       font-size: 0.8rem;
+      font-weight: 600;
       width: fit-content;
       padding: .125rem .625rem .125rem .125rem;
-      height: 1.4rem;
+      height: fit-content;
       border-radius: .3rem;
       box-shadow: .3125rem .3125rem .3125rem gray; }
-  .gridmain .menuPrincipal div {
+  body .gridmain .menuPrincipal div {
     margin-left: .625rem; }
-    .gridmain .menuPrincipal div ol li {
+    body .gridmain .menuPrincipal div ol li {
       margin-left: 0; }
-  .gridmain .articulo {
+  body .gridmain .articulo {
     width: 58vw; }
-    .gridmain .articulo ul li {
+    body .gridmain .articulo ul li {
       font-size: 1.1rem;
       letter-spacing: -0.01rem; }
-  .gridmain .selec input {
+  body .gridmain .selec input {
     margin: .3125rem; }
-  .menuArticulo p {
+  body .menuArticulo p {
     font-size: 1.1rem; }
-  footer div p {
+  body footer div p {
     font-size: .7rem; } }
 
 @media screen and (max-width: 425px) {
-  header div {
-    margin-top: .6rem; }
-    header div h1 {
-      font-size: 1.5em; }
-  header .navBar .btCont {
-    margin-right: 0.3rem; }
-  main .gridmain {
+  body header div {
+    margin: auto 0 auto; }
+    body header div h1 {
+      font-size: 1.35em; }
+  body header .navBar .btCont {
+    margin-right: 0rem; }
+  body main .gridmain {
     align-items: center;
     display: grid;
     grid-template-columns: 14.25rem auto;
     grid-template-rows: 1fr 2fr;
     grid-template-areas: "menuPrincipal antetitulo" "articulo articulo"; }
-    main .gridmain .antetitulo h2 {
+    body main .gridmain .antetitulo h2 {
       width: 7.5rem;
       height: 2rem;
       font-size: 1.2rem; }
-    main .gridmain .menuPrincipal div {
+    body main .gridmain .menuPrincipal div {
       margin-left: .625rem 0 0 .3125rem;
       padding: .3125rem; }
-      main .gridmain .menuPrincipal div ol li {
+      body main .gridmain .menuPrincipal div ol li {
         margin: 10px 10px 10px 20px;
         width: 6.4375rem;
         height: 2rem; }
-    main .gridmain .articulo {
+    body main .gridmain .articulo {
       width: 94vw;
       margin: .625rem 0 .3125rem .625rem; }
-      main .gridmain .articulo ul li {
+      body main .gridmain .articulo ul li {
         font-size: 1.3rem; }
-    main .gridmain #carouselExampleAutoplaying {
+    body main .gridmain #carouselExampleAutoplaying {
       width: 95vw;
       margin: .625rem 0 .3125rem .625rem; }
-  main .menuArticulo p {
+  body main .menuArticulo p {
     font-size: 0.9rem; }
-  main .menuArticulo .imgArticulo img {
+  body main .menuArticulo .imgArticulo img {
     width: 8rem;
     height: 8rem;
     border-radius: 50%; } }
 
 @media screen and (max-width: 375px) {
-  header div h1 {
-    font-size: 1.55em;
+  body header div h1 {
+    font-size: 1.13em;
     margin: 0; }
-  header .navBar {
+  body header .navBar {
     margin-right: 0px; }
-    header .navBar a {
+    body header .navBar a {
       padding: .1rem .3rem .1rem .1rem; }
-  main .gridmain {
+  body main .gridmain {
     align-items: center;
     display: grid;
     grid-template-columns: 10rem auto;
     grid-template-rows: 1fr 2fr;
     grid-template-areas: "menuPrincipal antetitulo" "articulo articulo"; }
-    main .gridmain .antetitulo h2 {
+    body main .gridmain .antetitulo h2 {
       width: 7rem;
       height: 2rem;
       font-size: 1.1rem; }
-  footer div p {
+  body footer div p {
     margin: 3rem 0rem 0.25rem 0.1rem; }
-  footer .siganosFoot {
+  body footer .siganosFoot {
     margin: 1rem 0.2rem auto 0; }
-    footer .siganosFoot p {
+    body footer .siganosFoot p {
       font-size: 1.2rem; }
-    footer .siganosFoot a img {
+    body footer .siganosFoot a img {
       max-width: 1.875rem; } }
 
 @media screen and (max-width: 326px) {
-  header div h1 {
-    font-size: 1.26em;
-    margin: 0; }
-  main .gridmain .menuPrincipal {
+  body header div {
+    margin: auto 0 auto; }
+    body header div h1 {
+      font-size: 1.1em; }
+    body header div p {
+      font-size: 0.7rem; }
+  body header .navBar a {
+    font-size: 0.7rem; }
+  body main .gridmain .menuPrincipal {
     width: 18rem; }
-  main .gridmain .articulo ul li {
+    body main .gridmain .menuPrincipal div h3 {
+      font-size: 1.2rem; }
+  body main .gridmain .articulo ul li {
     margin: 0;
     font-size: 19.2px; }
-  main .gridmain .gridFormulario .selec input {
+  body main .gridmain .gridFormulario .selec input {
     margin: .0625rem; }
-  main .menuArticulo p {
+  body main .menuArticulo p {
     font-size: 0.8rem; }
-  main .menuArticulo .imgArticulo img {
+  body main .menuArticulo .imgArticulo img {
     margin-right: 0; } }

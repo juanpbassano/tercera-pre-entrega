@@ -2,11 +2,12 @@
     .menuPrincipal{
         div{
         margin-left: 0;
-        width: fit-content;
+            h3{
+                letter-spacing: -0.05rem
+            }
         }
     }
     .articulo{
-        margin-left: .625rem;
         width: 32rem;
     }
     .menuArticulo{

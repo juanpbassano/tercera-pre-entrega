@@ -1,6 +1,6 @@
 .antetitulo{
     grid-area: antetitulo;
-    @include flex(none, center, center, none);
+    @include flex(row, center, center, none);
     font-weight: 600;
         h2{
             padding: .3rem;

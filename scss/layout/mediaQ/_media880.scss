@@ -1,21 +1,22 @@
 @media screen and (max-width:880px) {
     .gridmain{
         .menuPrincipal{
-            width: 20rem;
+            width: 19rem;
             div{
                 h3{
-                    font-size: 1.3rem ;
+                    margin:0;
+                    font-size: 1.26rem ;
                     letter-spacing: -0.05rem ;
                 }
                 ol{
                     li{
-                        margin: 1.25rem 1.25rem 1.25rem 0rem;
+                        margin: 1.25rem 1.25rem 1.25rem 1.25rem;
                     }
                 }
             }
         }
         .articulo{
-            width: auto;
+            width: 28rem;
             margin-right: .3125rem;
             ul{
                 li{

@@ -1,19 +1,20 @@
 @media screen and (max-width:375px) {
+    body {
         header {
             div {
                 h1 {
-                    font-size: 1.55em;
+                    font-size: 1.13em;
                     margin: 0;
                 }
             }
-            .navBar{
+            .navBar {
                 margin-right: 0px;
-                a{
+                a {
                     padding: .1rem .3rem .1rem .1rem;
                 }
             }
         }
-        main{
+        main {
             .gridmain {
                 align-items: center;
                 display: grid;
@@ -31,23 +32,23 @@
                 }
             }
         }
-            footer {
-                div {
-                    p {
-                        margin: 3rem 0rem 0.25rem 0.1rem;
-                    }
+        footer {
+            div {
+                p {
+                    margin: 3rem 0rem 0.25rem 0.1rem;
                 }
-                .siganosFoot {
-                    margin: 1rem 0.2rem auto 0;
-                    p {
-                        font-size: 1.2rem;
-                    }
-                    a {
-                        img {
-                            max-width: 1.875rem;
-                        }
+            }
+            .siganosFoot {
+                margin: 1rem 0.2rem auto 0;
+                p {
+                    font-size: 1.2rem;
+                }
+                a {
+                    img {
+                        max-width: 1.875rem;
                     }
                 }
             }
         }
-
+    }
+}

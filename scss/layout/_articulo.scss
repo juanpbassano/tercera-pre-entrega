@@ -1,8 +1,7 @@
 .articulo{
     display: flex;
     grid-area: articulo;
-    height: 24rem;
-    width: 32rem;
+    margin-top: 3.2rem;
     align-items: center;
     ul{
         @include flex(column, center, none, none );

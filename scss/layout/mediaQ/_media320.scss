@@ -1,40 +1,55 @@
-@media screen and (max-width:326px){
-    header {
-        div {
-            h1 {
-                font-size: 1.26em;
-                margin: 0;
-            }
-        }
-    }
-    main{
-        .gridmain{
-            .menuPrincipal{
-                width: 18rem;
-            }
-            .articulo{
-                ul{
-                    li{
-                        margin:0;
-                        font-size: 19.2px;
-                    }
+@media screen and (max-width:326px) {
+    body {
+        header {
+            div {
+                margin: auto 0 auto;
+                h1 {
+                    font-size: 1.1em;
+                }
+                p{
+                    font-size: 0.7rem;
                 }
             }
-            .gridFormulario{
-                .selec{
-                    input{
-                        margin:.0625rem;
-                    }
+            .navBar{
+                a{
+                    font-size: 0.7rem;
                 }
             }
         }
-        .menuArticulo{
-            p{
-                font-size: 0.8rem;
+        main {
+            .gridmain {
+                .menuPrincipal {
+                    width: 18rem;
+                    div {
+                        h3 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .articulo {
+                    ul {
+                        li {
+                            margin: 0;
+                            font-size: 19.2px;
+                        }
+                    }
+                }
+                .gridFormulario {
+                    .selec {
+                        input {
+                            margin: .0625rem;
+                        }
+                    }
+                }
             }
-            .imgArticulo{
-                img{
-                    margin-right: 0;
+            .menuArticulo {
+                p {
+                    font-size: 0.8rem;
+                }
+                .imgArticulo {
+                    img {
+                        margin-right: 0;
+                    }
                 }
             }
         }

@@ -1,7 +1,7 @@
 main {
     grid-area: main; /*ASIGNADO AL GRID DEL BODY*/
     .gridmain{
-        @include grid(40% 60%, 7rem 27.25rem,"antetitulo antetitulo""menuPrincipal articulo");
+        @include grid(40vw 60vw, 7rem 27.25rem,"antetitulo antetitulo""menuPrincipal articulo");
         section {
             grid-area: menuPrincipal;
             width: 24.375rem;

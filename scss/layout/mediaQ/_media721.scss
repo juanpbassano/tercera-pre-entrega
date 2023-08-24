@@ -1,5 +1,14 @@
 @media screen and (max-width:721px){
-        .gridmain{
+        body{
+            header{
+                .navBar{
+                    a{
+                        margin:0;
+                        width: 8rem;
+                    }
+                }
+            }
+        }.gridmain{
                 .articulo{
             width: 55vw;
             ul{    

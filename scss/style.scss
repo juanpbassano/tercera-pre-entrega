@@ -1,10 +1,10 @@
 /*variables mixins y funciones*/
+@import "./Base/reset";
 @import "./Base/typos";
 @import "./utilities/variables";
 @import "./utilities/mixins";
 
 /*todo lo correspondiente al codigo*/
-@import "./Base/reset";
 @import "./layout/body";
 @import "./layout/header";
 @import "./layout/main-index";
