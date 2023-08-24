@@ -55,12 +55,11 @@ main {
         }
 
 .menuArticulo{
-        width: 100%;
+        width: 100vw;
         background-color: rgba(128, 128, 128, 0.575);
         height: 25rem;
         display: flex;
-        margin-right: 6.25rem;
-        margin-bottom: 3.125rem;
+        margin-top: 2rem;
         p{
             margin: auto auto auto .625rem;
             color: $color-fuentes2;
@@ -70,7 +69,7 @@ main {
         div{
             @include flex(row, end, center, none);
             img{
-                margin-right: 5rem;
+                margin-right: 3rem;
                 width: 18.75rem;
                 height: 18.75rem;
                 border-radius: 50%;
