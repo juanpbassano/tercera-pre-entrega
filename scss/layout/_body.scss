@@ -2,9 +2,9 @@ body {
     background-image: url(../assets/IMG/fondo.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     font-family: 'K2D', sans-serif;
     width: auto;
-    min-height: 100vh;
+    height: 100vh;
     @include grid(none, auto 1fr auto, "header""main""footer");
 }
